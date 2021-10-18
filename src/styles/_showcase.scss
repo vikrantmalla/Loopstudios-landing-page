@@ -1,0 +1,99 @@
+.container {
+    display: grid;
+    gap: 2rem;
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    button {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        transition: all 0.25s ease-in-out;
+        cursor: pointer;
+        border: $ColorBlack solid .06rem;
+        padding: .8rem 3rem;
+        background-color: $ColorWhite;
+        order: 3;
+        width: max-content;
+        text-transform: uppercase;
+        font-family: 'Alata', sans-serif;
+        font-size: .9rem;
+        &:hover {
+            background-color: $ColorBlack;
+            color: $ColorWhite;
+        }
+    }
+    .showcase-grid {
+        padding: 0 2rem;
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 1.5rem;
+        .showcase {
+            position: relative;
+            text-align: center;
+            color: white;
+            .overlay-text {
+                position: absolute;
+                bottom: 20px;
+                left: 16px;
+                color: white;
+                text-align: left;
+                text-transform: uppercase;
+                width: 135px;
+            }
+        }
+    }
+}
+
+@media (min-width: 43em) {
+    .container {
+        .showcase-grid {
+            grid-template-columns: repeat(2, 1fr);
+            .showcase {
+                .overlay-text {
+                    left: 75px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 62em) {
+    .container {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 1.8rem;
+        h1 {
+            justify-self: flex-start;
+        }
+        button {
+            display: grid;
+            justify-self: flex-end;
+            align-self: start;
+        }
+        .showcase-grid {
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row: 2/3;
+            grid-column: 1/3;
+            gap: 1.5rem;
+            .showcase {
+                position: relative;
+                &:hover {
+                    opacity: 0.7;
+                    cursor: pointer;
+                }
+                .overlay-text {
+                    position: absolute;
+                    font-size: 1.2rem;
+                    bottom: 20px;
+                    left: 30px;
+                    width: 150px;
+                }
+            }
+        }
+    }
+}

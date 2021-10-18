@@ -1,0 +1,160 @@
+.banner {
+    background-image: url('../assets/images/mobile/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    .nav-bar {
+        @include flex(row,
+        space-between);
+        padding: 2.5rem 1.2rem;
+        position: relative;
+        .nav-menu {
+            display: none;
+        }
+        .logo {
+            z-index: 4;
+        }
+        .nav-menu.active {
+            @include flex(column,
+            center);
+            align-items: flex-start;
+            gap: 1.5rem;
+            width: 100vw;
+            min-height: 100vh;
+            top: 0;
+            left: 0;
+            position: fixed;
+            padding: 2.5rem 1.2rem;
+            background: black;
+            z-index: 3;
+            transition: 0.2s ease-out;
+            list-style: none;
+            li {
+                font-family: 'Alata', sans-serif;
+                color: $ColorWhite;
+                text-align: left;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+            }
+        }
+        .menu-icon {
+            color: white;
+            z-index: 4;
+        }
+    }
+    .overlay-heading {
+        border: .2rem solid $ColorWhite;
+        margin: 6rem 2rem;
+        padding: 2rem;
+        font-size: 1.2rem;
+        color: $ColorWhite;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 43em) {
+    .banner {
+        height: 80vh;
+        .nav-bar {
+            @include flex(row,
+            space-between);
+            padding: 2.5rem 3rem;
+            .nav-menu.active {
+                @include flex(column,
+                center);
+                padding: 2.5rem 1.2rem;
+                gap: 1.5rem;
+                li {
+                    font-family: 'Alata', sans-serif;
+                    color: $ColorWhite;
+                    text-align: left;
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                }
+            }
+            .menu-icon {
+                color: white;
+                z-index: 4;
+            }
+        }
+        .overlay-heading {
+            margin: 2rem 3rem;
+            max-width: 400px;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (min-width: 62em) {
+    .banner {
+        background-image: url('../assets/images/desktop/image-hero.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 80vh;
+        .nav-bar {
+            @include flex(row,
+            space-between);
+            padding: 2rem 10rem;
+            .nav-menu.active {
+                display: none;
+            }
+            .nav-menu {
+                @include flex(row,
+                center);
+                gap: 1rem;
+                list-style: none;
+                color: $ColorWhite;
+                li {
+                    font-family: 'Alata', sans-serif;
+                    text-align: center;
+                    font-size: 1.2rem;
+                    position: relative;
+                    z-index: 1;
+                    color: $ColorWhite;
+                    cursor: pointer;
+                    &::after {
+                        content: '';
+                        width: 50%;
+                        height: 3px;
+                        background-color: $ColorWhite;
+                        opacity: 0;
+                        position: absolute;
+                        top: 35px;
+                        left: 15px;
+                        z-index: -1;
+                    }
+                    &:hover::after {
+                        opacity: 1;
+                    }
+                }
+            }
+            .menu-icon {
+                display: none;
+            }
+        }
+        .overlay-heading {
+            max-width: 600px;
+            font-size: 2rem;
+            margin-left: 10rem;
+        }
+    }
+}
+
+@media (min-width: 87em) {
+    .banner {
+        .nav-bar {
+            .nav-menu {
+                gap: 1.5rem;
+                li {
+                    font-size: 1.8rem;
+                    &::after {
+                        top: 45px;
+                    }
+                }
+            }
+        }
+        .overlay-heading {
+            font-size: 2.5rem;
+        }
+    }
+}
