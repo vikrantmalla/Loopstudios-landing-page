@@ -46,9 +46,10 @@
         border: .2rem solid $ColorWhite;
         margin: 4rem 2rem;
         padding: 2rem;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         color: $ColorWhite;
         text-transform: uppercase;
+        line-height: 3rem;
     }
 }
 
@@ -94,20 +95,20 @@
         .nav-bar {
             @include flex(row,
             space-between);
-            padding: 2rem 10rem;
+            padding: 2.5rem 10rem;
             .nav-menu.active {
                 display: none;
             }
             .nav-menu {
                 @include flex(row,
                 center);
-                gap: 1rem;
+                gap: 1.5rem;
                 list-style: none;
                 color: $ColorWhite;
                 li {
                     font-family: 'Alata', sans-serif;
                     text-align: center;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     position: relative;
                     z-index: 1;
                     color: $ColorWhite;
@@ -136,17 +137,19 @@
             max-width: 600px;
             font-size: 2rem;
             margin-left: 10rem;
+            line-height: 4.5rem;
         }
     }
 }
 
 @media (min-width: 87em) {
     .banner {
+        height: 75vh;
         .nav-bar {
             .nav-menu {
-                gap: 1.5rem;
+                gap: 2rem;
                 li {
-                    font-size: 1.8rem;
+                    font-size: 1.3rem;
                     &::after {
                         top: 45px;
                     }
@@ -155,7 +158,9 @@
         }
         .overlay-heading {
             margin-top: 7rem;
+            max-width: 700px;
             font-size: 2.5rem;
+            line-height: 5rem;
         }
     }
 }

@@ -81,9 +81,10 @@
   border: 0.2rem solid white;
   margin: 4rem 2rem;
   padding: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: white;
   text-transform: uppercase;
+  line-height: 3rem;
 }
 
 @media (min-width: 43em) {
@@ -162,7 +163,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 2rem 10rem;
+    padding: 2.5rem 10rem;
   }
   .banner .nav-bar .nav-menu.active {
     display: none;
@@ -181,14 +182,14 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     list-style: none;
     color: white;
   }
   .banner .nav-bar .nav-menu li {
     font-family: 'Alata', sans-serif;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     position: relative;
     z-index: 1;
     color: white;
@@ -215,22 +216,28 @@
     max-width: 600px;
     font-size: 2rem;
     margin-left: 10rem;
+    line-height: 4.5rem;
   }
 }
 
 @media (min-width: 87em) {
+  .banner {
+    height: 75vh;
+  }
   .banner .nav-bar .nav-menu {
-    gap: 1.5rem;
+    gap: 2rem;
   }
   .banner .nav-bar .nav-menu li {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
   .banner .nav-bar .nav-menu li::after {
     top: 45px;
   }
   .banner .overlay-heading {
     margin-top: 7rem;
+    max-width: 700px;
     font-size: 2.5rem;
+    line-height: 5rem;
   }
 }
 
@@ -304,11 +311,14 @@
 }
 
 @media (min-width: 87em) {
-  .interactive-info h1 {
+  .interactive .container img {
+    width: 90%;
+  }
+  .interactive .container .interactive-info h1 {
     font-size: 2.8rem;
     line-height: 1.1;
   }
-  .interactive-info p {
+  .interactive .container .interactive-info p {
     line-height: 1.8;
     font-size: 1rem;
   }
@@ -380,6 +390,9 @@
 }
 
 @media (min-width: 43em) {
+  .container {
+    gap: 3rem;
+  }
   .container .showcase-grid {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -394,10 +407,14 @@
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
-    gap: 1.8rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
   }
   .container h1 {
     justify-self: flex-start;
+    font-size: 2rem;
   }
   .container button {
     display: -ms-grid;
@@ -405,6 +422,8 @@
     justify-self: flex-end;
     -ms-grid-row-align: start;
         align-self: start;
+    letter-spacing: .2rem;
+    font-size: 1rem;
   }
   .container .showcase-grid {
     padding: 0;
@@ -429,10 +448,30 @@
   }
   .container .showcase-grid .showcase .overlay-text {
     position: absolute;
-    font-size: 1.2rem;
+    font-size: 1rem;
     bottom: 20px;
     left: 30px;
-    width: 150px;
+    width: 135px;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 87em) {
+  .container {
+    margin-top: 10rem;
+    gap: 4rem;
+  }
+  .container h1 {
+    font-size: 2.5rem;
+  }
+  .container button {
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+  }
+  .container .showcase-grid .showcase .overlay-text {
+    left: 40px;
+    width: 130px;
+    line-height: 2.2rem;
   }
 }
 
@@ -536,8 +575,8 @@
 
 @media (min-width: 62em) {
   .footer {
-    padding: 2rem 8rem;
-    margin-top: 5rem;
+    padding: 4rem 8rem;
+    margin-top: 10rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

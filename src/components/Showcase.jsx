@@ -3,9 +3,9 @@ import React from 'react'
 const Showcase = () => {
     return (
         <>
-            <div className="container">
-                    <h1>Our creations</h1>
-                    <button className="creations__btn">See all</button>
+            <section className="container">
+                <h1>Our creations</h1>
+                <button className="creations__btn">See all</button>
                 <ul className="showcase-grid">
                     <li className="showcase deep-earth">
                         <picture className="img-holder">
@@ -80,7 +80,7 @@ const Showcase = () => {
                         </div>
                     </li>
                 </ul>
-            </div>
+            </section>
 
         </>
     )

@@ -48,6 +48,7 @@
 
 @media (min-width: 43em) {
     .container {
+        gap: 3rem;
         .showcase-grid {
             grid-template-columns: repeat(2, 1fr);
             .showcase {
@@ -64,14 +65,18 @@
         width: 80vw;
         margin-left: auto;
         margin-right: auto;
-        gap: 1.8rem;
+        align-items: center;
+        gap: 3rem;
         h1 {
             justify-self: flex-start;
+            font-size: 2rem;
         }
         button {
             display: grid;
             justify-self: flex-end;
             align-self: start;
+            letter-spacing: .2rem;
+            font-size: 1rem;
         }
         .showcase-grid {
             padding: 0;
@@ -88,10 +93,34 @@
                 }
                 .overlay-text {
                     position: absolute;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     bottom: 20px;
                     left: 30px;
-                    width: 150px;
+                    width: 135px;
+                    line-height: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 87em) {
+    .container {
+        margin-top: 10rem;
+        gap: 4rem;
+        h1 {
+            font-size: 2.5rem;
+        }
+        button {
+            font-size: 1.5rem;
+            letter-spacing: .5rem;
+        }
+        .showcase-grid {
+            .showcase {
+                .overlay-text {
+                    left: 40px;
+                    width: 130px;
+                    line-height: 2.2rem;
                 }
             }
         }
